@@ -27,7 +27,8 @@ Template Name: Shop Page
   					the_content();
   					echo '</div><div>';
 					$tailles = wp_get_post_terms($post->ID, 'Taille', array("fields" => "names"));
-					if (count($tailles)> 1) $multis = 's';
+					$multis = '';
+					if (count($tailles) > 1) $multis = 's';
 					echo 'Taille'.$multis.' disponible'.$multis.' : <input type="hidden" name="on0" value="Taille"><select name="os0">';
 					foreach ($tailles as $key => $taille)
 					{

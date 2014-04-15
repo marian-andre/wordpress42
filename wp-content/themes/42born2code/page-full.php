@@ -25,14 +25,6 @@ Template Name: Full Width
 				<div class="entry-content">
 				<?php the_content() ?>
 				</div>
-<?php if ( get_post_meta($post->ID, 'id_dailymotion', true) ) : ?> 
-<h6>Vidéo Dailymotion: </h6>
-<?php echo get_post_meta($post->ID, 'id_dailymotion', true) ?>
-<?php endif; ?>
-<?php if ( get_post_meta($post->ID, 'Description de l\'image', true) ) : ?> 
-<h6>Description de l'image: </h6>
-<?php echo get_post_meta($post->ID, 'Description de l\'image', true) ?>
-<?php endif; ?>
 			</div><!-- entry -->
 <?php if ( get_post_custom_values('comments') ) comments_template() ?>
 

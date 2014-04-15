@@ -28,7 +28,13 @@
 			<img id="site-logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" />
 		</a>
 		<div id="blocsearch"> <?php include('searchform.php'); ?></div>
-		<div id="access"><a href="/mandre/login/">Accès candidat</a></div>
+		<?php if (!is_user_logged_in())
+		{
+		?>
+		<div id="access"><a href="<?php bloginfo('url'); ?>/login/">Accès candidat</a></div>
+		<?php
+		}
+		?>
 		<div id="subscribe">
 <?php if (!is_user_logged_in())
 	{

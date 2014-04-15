@@ -43,14 +43,6 @@ Template Name: Archives Page
 			</div>
 			<div class="clear"></div>
 		</div>
-<?php if ( get_post_meta($post->ID, 'id_dailymotion', true) ) : ?> 
-<h6>Vidéo Dailymotion: </h6>
-<?php echo get_post_meta($post->ID, 'id_dailymotion', true) ?>
-<?php endif; ?>
-<?php if ( get_post_meta($post->ID, 'Description de l\'image', true) ) : ?> 
-<h6>Description de l'image: </h6>
-<?php echo get_post_meta($post->ID, 'Description de l\'image', true) ?>
-<?php endif; ?>
 	</div><!-- entry -->
 </div><!-- #content -->
 <?php get_sidebar() ?>

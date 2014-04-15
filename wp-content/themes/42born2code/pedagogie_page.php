@@ -24,14 +24,6 @@ Template Name: Pédagogie Page
 		<?php the_content() //cf. codex the_content() ?>
 		<?php wp_link_pages('before=<div id="page-links">&after=</div>'); ?>
 		</div>
-<?php if ( get_post_meta($post->ID, 'id_dailymotion', true) ) : ?> 
-<h6>Vidéo Dailymotion: </h6>
-<?php echo get_post_meta($post->ID, 'id_dailymotion', true) ?>
-<?php endif; ?>
-<?php if ( get_post_meta($post->ID, 'Description de l\'image', true) ) : ?> 
-<h6>Description de l'image: </h6>
-<?php echo get_post_meta($post->ID, 'Description de l\'image', true) ?>
-<?php endif; ?>
 	</div><!-- entry -->
 <?php if ( get_post_custom_values('comments') ) comments_template() ?>
 </div><!-- #content -->
